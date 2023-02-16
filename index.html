@@ -2,50 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <title>Frontend Mentor | NFT preview card component</title>
-
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Advice Generator App</title>
   </head>
   <body>
     <div class="container">
-      <article class="main-image">
-        <img src="./images/image-equilibrium.jpg" alt="" />
-        <div>
-          <img src="./images/icon-view.svg" alt="" />
-        </div>
-      </article>
+      <h1 class="title">Advice #</h1>
+      <p class="text"></p>
 
-      <article>
-        <h2>Equilibrium #3429</h2>
-        <p>Our Equilibrium collection promotes balance and calm.</p>
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/pattern-divider-desktop.svg"
+        />
+        <img src="./images/pattern-divider-mobile.svg" alt="divider" />
+      </picture>
 
-        <ul>
-          <li><img src="./images/icon-ethereum.svg" alt="" /> 0.041 ETH</li>
-          <li><img src="./images/icon-clock.svg" alt="" /> 3 days left</li>
-        </ul>
-      </article>
-
-      <article class="avatar">
-        <img src="./images/image-avatar.png" alt="" />
-        <p>Creation of <span>Jules Wyvern</span></p>
-      </article>
+      <div>
+        <button onclick="fetchAdvice()">
+          <img src="./images/icon-dice.svg" alt="" />
+        </button>
+      </div>
     </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Timmey</a>.
-    </div>
+    <script src="app.js"></script>
   </body>
 </html>
